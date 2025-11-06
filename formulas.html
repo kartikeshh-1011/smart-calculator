@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formula Library</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>📚 Formula Library</h1>
+    <p>View and calculate common logarithmic and trigonometric formulas.</p>
+  </header>
+
+  <main class="formula-container">
+    <div class="formula-box">
+      <h2>🔢 Trigonometric Functions</h2>
+      <p>Enter angle (in degrees):</p>
+      <input type="number" id="angleInput" placeholder="e.g. 45">
+
+      <div class="formula-buttons">
+        <button onclick="calcTrig('sin')">sin(θ)</button>
+        <button onclick="calcTrig('cos')">cos(θ)</button>
+        <button onclick="calcTrig('tan')">tan(θ)</button>
+      </div>
+
+      <div class="formula-result" id="trigResult"></div>
+
+      <h3>📘 Trigonometric Identities:</h3>
+      <ul>
+        <li>sin²(θ) + cos²(θ) = 1</li>
+        <li>tan(θ) = sin(θ) / cos(θ)</li>
+        <li>cot(θ) = 1 / tan(θ)</li>
+      </ul>
+    </div>
+
+    <div class="formula-box">
+      <h2>🧮 Logarithmic Functions</h2>
+      <p>Enter value (x > 0):</p>
+      <input type="number" id="logInput" placeholder="e.g. 10">
+
+      <div class="formula-buttons">
+        <button onclick="calcLog('log10')">log₁₀(x)</button>
+        <button onclick="calcLog('ln')">ln(x)</button>
+      </div>
+
+      <div class="formula-result" id="logResult"></div>
+
+      <h3>📗 Logarithmic Properties:</h3>
+      <ul>
+        <li>logₐ(M × N) = logₐ(M) + logₐ(N)</li>
+        <li>logₐ(M / N) = logₐ(M) − logₐ(N)</li>
+        <li>logₐ(Mⁿ) = n × logₐ(M)</li>
+      </ul>
+    </div>
+
+    <div class="back-link">
+      <a href="index.html">← Back to Home</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Smart Multi-Functional Calculator | Designed by Kartikesh Vispute</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,340 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f2f2f2;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background: #0078d4;
+  color: white;
+}
+
+header h1 {
+  font-size: 1.8rem;
+}
+
+header p {
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+.home-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  flex-grow: 1;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 30px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  background: #0078d4;
+  color: white;
+  transform: translateY(-5px);
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #222;
+  color: white;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.4rem;
+  }
+  .card {
+    padding: 20px;
+  }
+}
+
+
+.calc-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+.calculator {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 340px;
+}
+
+.display {
+  width: 100%;
+  height: 60px;
+  font-size: 1.6rem;
+  text-align: right;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background: #f7f7f7;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.btn {
+  padding: 15px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  background: #eaeaea;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: #0078d4;
+  color: white;
+}
+
+.operator {
+  background: #0078d4;
+  color: white;
+}
+
+.equal {
+  grid-column: span 2;
+  background: #28a745;
+  color: white;
+}
+
+.back-link {
+  margin-top: 20px;
+}
+
+.back-link a {
+  color: #0078d4;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-link a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .display {
+    height: 50px;
+    font-size: 1.4rem;
+  }
+
+  .btn {
+    padding: 12px;
+    font-size: 1rem;
+  }
+}
+
+
+
+.converter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+.converter-box {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  max-width: 350px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.converter-box label {
+  font-weight: 500;
+}
+
+.converter-box select, 
+.converter-box input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.converter-box button {
+  background: #0078d4;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.converter-box button:hover {
+  background: #005fa3;
+}
+
+.result-box {
+  background: #f2f2f2;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .converter-box {
+    padding: 20px;
+  }
+}
+
+
+
+.formula-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  padding: 30px;
+}
+
+.formula-box {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.formula-box h2 {
+  color: #0078d4;
+  margin-bottom: 10px;
+}
+
+.formula-buttons {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.formula-buttons button {
+  flex: 1;
+  background: #0078d4;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.formula-buttons button:hover {
+  background: #005fa3;
+}
+
+.formula-result {
+  background: #f2f2f2;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.formula-box ul {
+  list-style-type: square;
+  padding-left: 20px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+@media (max-width: 600px) {
+  .formula-box {
+    padding: 20px;
+  }
+}
+
+
+
+/* === UNIVERSAL RESPONSIVENESS === */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header p {
+    font-size: 0.9rem;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  .card, .converter-box, .calculator, .formula-box {
+    width: 100%;
+    max-width: 90%;
+    margin: auto;
+  }
+
+  .btn, .formula-buttons button, .converter-box button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  input, select {
+    font-size: 1rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+}
+
+/* For very small phones */
+@media (max-width: 480px) {
+  .buttons {
+    gap: 8px;
+  }
+
+  .display {
+    font-size: 1.3rem;
+    height: 45px;
+  }
+
+  .btn {
+    padding: 10px;
+  }
+}
